@@ -107,7 +107,7 @@
                 <article class="product">
                     <img src="download (1).jpg" alt="Product 1">
                     <h3>Peeak Milk </h3>
-                    <p>150.00 LE</p>
+                    <p>170.00 LE</p>
                     <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
                 </article>
                 <article class="product">
@@ -359,7 +359,7 @@
                 <article class="product">
                     <img src="   paboi.jpg" alt="Product 10">
                     <h3>Parboiled Rice Small Bag</h3>
-                    <p>350.00 LE</p>
+                    <p>370.00 LE</p>
                     <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
                 </article>
                 <article class="product">
@@ -628,8 +628,8 @@
             orderList += `\nDelivery location: ${location.trim()}`;
             if (details.trim()) orderList += `\nDelivery details: ${details.trim().slice(0, 500)}`;
             orderList += `\nDelivery Time: ${Time.trim()}`;
-            orderList +=  `\nDelivery charge: ${charge.toFixed(2)} LE`;
-            orderList += `\nTotal Payment: ${total.toFixed(2)} LE`;
+            orderList +=  `\nDelivery charge: ${charge.toFixed(1)} LE`;
+            orderList += `\nTotal Payment: ${total.toFixed(1)} LE`;
             orderList += "\n\nPlease confirm the total. Thank you!";
 
             const whatsappUrl = `https://wa.me/31668196?text=${encodeURIComponent(orderList)}`;
