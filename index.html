@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+     <nav class="navbar">
+        <div class="navbar-inner">
+            <div class="logo" aria-label="W Shop logo">
+                <div class="logo-mark">W</div>
+                <span>W Shop</span>
+            </div>
+            <div class="main-nav" aria-label="Main navigation">
+                <a href="index.html" class="active">Shop</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="shop">
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Fresh daily essentials</p>
+                <h1>Shop smarter for your home and family.</h1>
+                <p>Welcome to our store. Find the best groceries and household favorites at great prices with easy ordering and delivery.</p>
+                <p>Payment methods accepted:</p>
+                <div class="container-payment">
+                    <div class="payment-method">Cash on Delivery💵</div>
+                    <div class="payment-method">Orange Money💵</div>
+                    <div class="payment-method">Africell Money💵</div>
+                    <div class="payment-method">Pick Up🛻</div>
+                </div>
+            </div>
+            <div class="hero-stats" aria-label="Store highlights">
+                <div class="hero-stat">
+                    <strong>50+</strong>
+                    <span>Products</span>
+                </div>
+                <div class="hero-stat">
+                    <strong>Same</strong>
+                    <span>Day delivery</span>
+                </div>
+                <div class="hero-stat">
+                    <strong>4</strong>
+                    <span>Payments</span>
+                </div>
+                <div class="hero-stat">
+                    <strong>24/7</strong>
+                    <span>Support</span>
+                </div>
+            </div>
+        </section> 
+        <div class="search-row">
+            <div class="search-field">
+                <input id="searchInput" type="text" placeholder="Search for products..." oninput="searchProducts()">
+            </div>
+            <div class="action-buttons">
+                <button type="button" onclick="sendToWhatsApp()" class="buttonsend">Send Order</button>
+                <button type="button" onclick="deleteFromCart()" class="buttondelet">Clear Cart</button>
+            </div>
+        </div>
+        <div class="heading">
+            <h1>50+ Products</h1>
+        </div>
+        <div class="container-item">
+            <div class="item">
+                <article class="product">
+                    <img src="nutrilac.jpg" alt="">
+                    <h3>Nutrilac</h3>
+                    <p>70</p>
+                    <button type="button" class="add-button" onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="nutrilon(1).jpg" alt="">
+                    <h3>nutrilon</h3>
+                    <p>70</p>
+                <button type="button" class="add-button" onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="cerelac r.jpg" alt="Product 10">
+                    <h3>Cerelac Rice</h3>
+                    <p>150.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="oat.jpg" alt="product 10">
+                    <h3>Quaker White OATS</h3>
+                    <P>70</P>
+                    <button type="button" class="add-button" onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   cer.jpg" alt="Product 10">
+                    <h3>Cerelac Rice Box</h3>
+                    <p>150.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="padi.jpg" alt="product 10">
+                    <h3>Padi</h3>
+                    <p>55</p>
+                    <button type="button" class="add-button" onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="download (1).jpg" alt="Product 1">
+                    <h3>Peeak Milk </h3>
+                    <p>150.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   nido.jpg" alt="Product 10">
+                    <h3>Nido Milk</h3>
+                    <p>110.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   +.jpg" alt="product 2">
+                    <h3>Nido+ Mike</h3>
+                    <p>150.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   power.jpg" alt="Product 1">
+                    <h3>Milk row</h3>
+                    <p>40.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   nan.jpg" alt="Product 2">
+                    <h3>NAN 1 Milk</h3>
+                    <p>150.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   nan2.jpg" alt="Product 3">
+                    <h3>NAN 2 Milk</h3>
+                    <p>150.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   egg.jpg" alt="Product 2">
+                    <h3>Egg (30 pic)</h3>
+                    <p>180.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   egg.jpg" alt="Product 3">
+                    <h3>Egg (15 pic)</h3>
+                    <p>90.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   gold.jpg" alt="Product 4">
+                    <h3>Golden Gate Butter</h3>
+                    <p>30.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   su.jpeg" alt="Product 10">
+                    <h3>Confidence Susage</h3>
+                    <p>30.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="download.jpg" alt="Product 2">
+                    <h3>Zewn lunchon meat</h3>
+                    <p>70.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="download.jpg" alt="Product 2">
+                    <h3>Zewn lunchon meat small</h3>
+                    <p>40.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="download (2).jpg" alt="Product 3">
+                    <h3>almeira lunchon meat </h3>
+                    <p>60.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="download (2).jpg" alt="Product 8">
+                    <h3>Almarai lunchon meat small</h3>
+                    <p>60.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="download (3).jpg" alt="Product 4">
+                    <h3>Corn Beef</h3>
+                    <p>150.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="images (jpb.jpg" alt="Product 5">
+                    <h3>JPB Mayonnaise</h3>
+                    <p>110.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="images.jpg" alt="Product 6">
+                    <h3>Bama Mayonnaise</h3>
+                    <p>110.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   x.jpg" alt="Product 5">
+                    <h3>Xtra jusice (1 pic)</h3>
+                    <p>80.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   xa.jpg" alt="Product 6">
+                    <h3>Xtra jusice (6 pack)</h3>
+                    <p>150.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">   
+                    <img src="   dig.jpg" alt="Product 7">
+                    <h3>Digestive Biscuits Chocolate</h3>
+                    <p>50.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   wheat.jpg" alt="Product 8">
+                    <h3>Cerelac wheat</h3>
+                    <p>100.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   nomal.jpg" alt="Product 9">
+                    <h3>Digestive Biscuits</h3>
+                    <p>50.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="images (1).jpg" alt="Product 6">
+                    <h3>Alfa Ketchup <small>small</small></h3>
+                    <p>30.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                 <article class="product">
+                    <img src="images (2)brow.jpg" alt="Product 10">
+                    <h3>Brownine</h3>
+                    <p>50.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">   
+                    <img src="images (2)chee.jpg" alt="Product 7">
+                    <h3>Cheese</h3>
+                    <p>40.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                 <article class="product">
+                    <img src="images (2) sun.jpg" alt="Product 10">
+                    <h3>Sunflower Oil big</h3>
+                    <p>320.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="images (2) o.jpg" alt="Product 10">
+                    <h3>Olive oli</h3>
+                    <p>350.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="IMG-1332.webp" alt="Product 10">
+                    <h3>Coconut Oil</h3>
+                    <p>300.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="download (4)cere.jpg" alt="Product 9">
+                    <h3>Ceres Juice</h3>
+                    <p>80.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   download (4)v.jpg" alt="Product 10">
+                    <h3>Viter milk</h3>
+                    <p>25.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                 <article class="product">
+                    <img src="   graft.jpg" alt="Product 10">
+                    <h3>Grafton Big</h3>
+                    <p>60.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   graft.jpg" alt="Product 10">
+                    <h3>Grafton Small</h3>
+                    <p>60.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   graft.jpg" alt="Product 10">
+                    <h3>Grafton Medium</h3>
+                    <p>60.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   gulf.jpg" alt="Product 10">
+                    <h3>Gulf Big</h3>
+                    <p>60.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   gulf.jpg" alt="Product 10">
+                    <h3>Gulf Small</h3>
+                    <p>60.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   gulf.jpg" alt="Product 10">
+                    <h3>Gulf Medium</h3>
+                    <p>60.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   sult.jpg" alt="Product 10">
+                    <h3>Sultana Rice</h3>
+                    <p>250.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   sunwhite.jpg" alt="Product 10">
+                    <h3>Sunwhite Rice</h3>
+                    <p>300.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   jacc.jpg" alt="Product 10">
+                    <h3>Jasmine Bag Rice</h3>
+                    <p>1600.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   jasmine.jpg" alt="Product 10">
+                    <h3>Jasmine Rice</h3>
+                    <p>1300.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   oau.jpg" alt="Product 10">
+                    <h3>OAU Rice</h3>
+                    <p>750.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   paboi.jpg" alt="Product 10">
+                    <h3>Perboiled Rice Big Bag</h3>
+                    <p>750.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   paboi.jpg" alt="Product 10">
+                    <h3>Parboiled Rice Small Bag</h3>
+                    <p>350.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   coca.jpg" alt="Product 10">
+                    <h3>Coca Coca  Drink (6 pieces) </h3>
+                    <p>150.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   mal.jpg" alt="Product 10">
+                    <h3>Maltina Can Drink (6 pieces) </h3>
+                    <p>150.00 LE</p>
+                    <button type="button" class="add-button" onclick="addToCart(this)">Add to Cart</button>
+                </article>
+                <article class="product">
+                    <img src="   diet.jpg" alt="Product 10">
+                    <h3>Diet Coke Can Drink (6 pieces) </h3>
+                    <p>190.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                 <article class="product">
+                    <img src="   fan.jpg" alt="Product 10">
+                    <h3>Fanta Can Drink (6 pieces) </h3>
+                    <p>150.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                 <article class="product">
+                    <img src="   vi.jpg" alt="Product 10">
+                    <h3>Vimto Can Drink (6 pieces) </h3>
+                    <p>180.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   spi.jpg" alt="Product 10">
+                    <h3>Sprite Can Drink (6 pieces) </h3>
+                    <p>150.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   pure.jpg" alt="Product 10">
+                    <h3>Pure Heaven </h3>
+                    <p>70.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="pringles.jpg" alt="product 10">
+                    <h3>Pringles original</h3>
+                    <p>70</p>
+                    <button type="button" class="add-button" onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="sabco.jpg" alt="product 10">
+                    <h3>Sabco Sadines</h3>
+                    <p>20</p>
+                    <button type="button" class="add-button" onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="sepia.jpg" alt="product 10">
+                    <h3>Sepia sadins</h3>
+                    <p>30</p>
+                    <button type="button" class="add-button" onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="handh.jpg" alt="product 10">
+                    <h3>H&H Sadines</h3>
+                    <p>25</p>
+                    <button type="button" class="add-button" onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="checker.jpg" alt="product 10">
+                    <h3>Checkers custer Banana</h3>
+                    <p>70</p>
+                    <button type="button" class="add-button" onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="vanila.jpg" alt="product 10">
+                    <h3>Checkers custard Vanila</h3>
+                    <p>70</p>
+                    <button type="button" class="add-button" onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="images (2) blue.jpg" alt="Product 10">
+                    <h3>Saba Blue Big</h3>
+                    <p>80.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="images (2)saba.jpg" alt="Product 10">
+                    <h3>Saba Yellow Big</h3>
+                    <p>70.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   download (4)wips.jpg" alt="Product 10">
+                    <h3>Bady Wipes</h3>
+                    <p>55000 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   download (4)wips.jpg" alt="Product 10">
+                    <h3>Bady Wipes big</h3>
+                    <p>120.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   download (4) dove.jpg" alt="Product 10">
+                    <h3>Dove Soap (6 packs)</h3>
+                      <p>180.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="download (4) irsh.jpg" alt="Product 10">
+                    <h3>Iresprine soap(4 packs)</h3>
+                    <p>180.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   download (4)r.jpg" alt="Product 10">
+                    <h3>Romar formular</h3>
+                    <p>120.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   download (4)lo.jpg" alt="Product 10">
+                    <h3>Pad Lovely</h3>
+                    <p>40.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   download (4)ni.jpg" alt="Product 10">
+                    <h3>Pad Nice</h3>
+                    <p>40.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   download (4)sunney.jpg" alt="Product 10">
+                    <h3>Sunny Pad</h3>
+                    <p>35.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   download (4)soft.jpg" alt="Product 10">
+                    <h3>Soft Care Pad</h3>
+                    <p>40.00 LE</p>
+                     <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   download (4)super.jpg" alt="Product 10">
+                    <h3>Super Premuim towells</h3>
+                    <p>75.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="softcare.jpg" alt="Product 10">
+                    <h3>Softcare panpas</h3>
+                    <p>200.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="   fats.jpg" alt="Product 10">
+                    <h3>Fatala Insect Kill spary</h3>
+                    <p>80.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                 <article class="product">
+                    <img src="   was.webp" alt="Product 10">
+                    <h3>Was-Tox Insect Kill spary</h3>
+                    <p>70.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                 <article class="product">
+                    <img src="   sp.jpg" alt="Product 10">
+                    <h3>Sprital Insect Kill spary</h3>
+                    <p>70.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                <article class="product">
+                    <img src="images (2)saba.jpg" alt="Product 10">
+                    <h3>Medium Saba Soap</h3>
+                    <p>35.00 LE</p>
+                    <button type="button" class="add-button"  onclick="addToCart(this)">Add to cart</button>
+                </article>
+                 
+                
+
+                
+
+            </div>
+       </div>
+        
+    </main>
+    <script>
+        'use strict';
+        const cart = [];
+        const MAX_CART_ITEMS = 100;
+
+         function searchProducts() {
+            const input = document.getElementById('searchInput');
+            const query = (input?.value || '').trim().slice(0, 100).toLowerCase();
+            document.querySelectorAll('.product').forEach(product => {
+                const title = product.querySelector('h3').textContent.toLowerCase();
+                const altText = product.querySelector('img')?.alt?.toLowerCase() || '';
+                const matches = query === '' || title.includes(query) || altText.includes(query);
+                product.style.display = matches ? '' : 'none';
+            });
+        }
+
+         
+
+        function addToCart(button) {
+            const product = button?.closest('.product');
+            const nameElement = product?.querySelector('h3');
+            const priceElement = product?.querySelector('p');
+            if (!product || !nameElement || !priceElement || cart.length >= MAX_CART_ITEMS) {
+                alert('Unable to add this product.');
+                return;
+            }
+            const productName = nameElement.textContent.trim().slice(0, 200);
+            const productPrice = priceElement.textContent.trim().slice(0, 50);
+            if (!productName || !productPrice) return;
+            
+            cart.push({ name: productName, price: productPrice });
+            alert(`${productName} added to cart! Total items: ${cart.length}`);
+            button.textContent = 'Added ✓';
+            button.disabled = true;
+            setTimeout(() => {
+                button.textContent = 'Add to Cart';
+                button.disabled = false;
+            }, 2000);
+        }
+
+        function sendToWhatsApp() {
+            if (cart.length === 0) {
+                alert("Please add products to cart first!");
+                return;
+            }
+
+            const location = window.prompt("Delivery location (Around Wilkinson Road / Big House only):");
+            if (!location || !location.trim()) {
+                alert("Please enter your delivery location.");
+                return;
+            }
+           const Time = window.prompt("Preferred delivery time:");
+            if (!Time || !Time.trim()) {
+                alert("Please enter your preferred delivery time.");
+                return;
+            }
+
+            
+
+            const details = window.prompt("Optional delivery details (phone, landmark, etc.):") || '';
+            const charge = 10;
+            const groupedItems = cart.reduce((items, item) => {
+                const key = `${item.name} - ${item.price}`;
+                items[key] = (items[key] || 0) + 1;
+                return items;
+            }, {});
+            const total = cart.reduce((sum, item) => {
+                const price = parseFloat(String(item.price).replace(/[^0-9.-]/g, '')) || 0;
+                return sum + price +charge;
+            }, 0);
+            let orderList = "Hello, I would like to place this order:\n\n";
+            Object.entries(groupedItems).forEach(([item, quantity], index) => {
+                orderList += `${index + 1}. ${quantity} x ${item}\n`;
+            });
+            orderList += `\nDelivery location: ${location.trim()}`;
+            if (details.trim()) orderList += `\nDelivery details: ${details.trim().slice(0, 500)}`;
+            orderList += `\nDelivery Time: ${Time.trim()}`;
+            orderList +=  `\nDelivery charge: ${charge.toFixed(2)} LE`;
+            orderList += `\nTotal Payment: ${total.toFixed(2)} LE`;
+            orderList += "\n\nPlease confirm the total. Thank you!";
+
+            const whatsappUrl = `https://wa.me/31668196?text=${encodeURIComponent(orderList)}`;
+            const newWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+            if (!newWindow) {
+                alert("Please allow pop-ups to send your order.");
+                return;
+            }
+
+            newWindow.opener = null;
+            cart.length = 0;
+            alert("Order opened in WhatsApp!");
+
+        
+        }
+        function deleteFromCart() {
+            if (cart.length === 0) {
+                alert("Cart is already empty!");
+                return;
+            }
+            else if (!confirm("Are you sure you want to clear the cart?")) {
+                return;
+
+            }      
+            else if (confirm("Are you really sure you want to clear the cart? This action cannot be undone.")) {
+                cart.length = 0;
+                alert("All items have been removed from the cart.");
+            }
+            else{
+                alert("Cart clearing canceled.");
+                return;
+            }
+
+        
+            cart.length = 0;
+            alert("All items have been removed from the cart.");
+        }
+    </script>
+    
+</body>
+</html>
